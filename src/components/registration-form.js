@@ -25,10 +25,10 @@ export class RegistrationForm extends React.Component {
                 <Field component={Input} type="text" name="firstName" />
                 <label htmlFor="lastName">Last name</label>
                 <Field component={Input} type="text" name="lastName" />
-                <label htmlFor="username">Username</label>
+                <label htmlFor="username">Email</label>
                 <Field
                     component={Input}
-                    type="text"
+                    type="email"
                     name="username"
                     validate={[required, nonEmpty, isTrimmed]}
                 />
@@ -37,7 +37,7 @@ export class RegistrationForm extends React.Component {
                     component={Input}
                     type="password"
                     name="password"
-                    validate={[required, length({min: 10, max: 72}), isTrimmed]}
+                    validate={[required, length({min: 4, max: 72}), isTrimmed]}
                 />
                 <label htmlFor="passwordConfirm">Confirm password</label>
                 <Field
